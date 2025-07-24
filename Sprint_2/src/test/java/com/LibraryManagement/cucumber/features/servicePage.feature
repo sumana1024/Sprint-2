@@ -1,3 +1,4 @@
+@ServiceQuery
 Feature: Contact and Query resolving services
   As a user
   I want to use different service options (Email, Call, Chat)
