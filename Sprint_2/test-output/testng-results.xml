@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="7" failed="3" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-28T10:44:15 IST" name="Suite" finished-at="2025-07-28T10:46:00 IST" duration-ms="104116">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2025-07-28T10:44:15 IST" name="Test" finished-at="2025-07-28T10:46:00 IST" duration-ms="104116">
+      <class name="com.LibraryManagement.cucumber.Runner.RunnerTest">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:15 IST" name="setUpClass" finished-at="2025-07-28T10:44:16 IST" duration-ms="204" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@2513a118]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:44:23 IST" duration-ms="7005" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate only one option selection in service page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:44:33 IST" duration-ms="10260" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Email option with valid email id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:44:43 IST" duration-ms="10149" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Email option with invalid email id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[Invalid email message not displayed]> but was:<[Mail Sent Successfully]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid email message not displayed]> but was:<[Mail Sent Successfully]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:79)
+at ✽.I should see an error message for invalid email(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:31)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:43 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:44:53 IST" duration-ms="10184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Email option with blank email id"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:44:53 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:04 IST" duration-ms="11121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with valid phone number"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:04 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:15 IST" duration-ms="10965" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with invalid phone number"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[Invalid phone message not displayed]> but was:<[Message Sent Successfully]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid phone message not displayed]> but was:<[Message Sent Successfully]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:94)
+at ✽.I should see an error message for invalid phone(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:60)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:27 IST" duration-ms="12014" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with blank phone number"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:38 IST" duration-ms="10882" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with valid name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:38 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:49 IST" duration-ms="10868" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with invalid name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.junit.ComparisonFailure">
+            <message>
+              <![CDATA[expected:<[Invalid name message not displayed]> but was:<[Message Sent Successfully]>]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid name message not displayed]> but was:<[Message Sent Successfully]>
+at org.junit.Assert.assertEquals(Assert.java:117)
+at org.junit.Assert.assertEquals(Assert.java:146)
+at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:109)
+at ✽.I should see an error message for invalid name(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:90)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.junit.ComparisonFailure -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:49 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-07-28T10:45:59 IST" duration-ms="10278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Validate Chat section with blank name"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Contact and Query resolving services"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@101952da]" started-at="2025-07-28T10:45:59 IST" name="tearDownClass" finished-at="2025-07-28T10:46:00 IST" duration-ms="105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.LibraryManagement.cucumber.Runner.RunnerTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
