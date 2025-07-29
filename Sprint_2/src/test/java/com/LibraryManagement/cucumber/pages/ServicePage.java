@@ -75,7 +75,7 @@ public class ServicePage {
     }
     public void clickSubmit() throws InterruptedException {
         driver.findElement(By.id("QuerySubmit")).click();
-       Thread.sleep(5000);
+       Thread.sleep(3000);
     }
 
     

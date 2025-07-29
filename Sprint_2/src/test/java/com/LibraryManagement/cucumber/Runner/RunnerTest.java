@@ -12,7 +12,7 @@ import io.cucumber.testng.CucumberOptions;
         "pretty",
         "junit:target/cucumber-reports/Cucumber.xml"
     },
-    tags = "(@BookSearch or @LibraryCard or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
+    tags = "(@BookSearch or @LibraryCard or @Membership or @ServiceQuery) and (not @ignore)" // optional filtering
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
     // No code needed here, TestNG will run with the above configurations
