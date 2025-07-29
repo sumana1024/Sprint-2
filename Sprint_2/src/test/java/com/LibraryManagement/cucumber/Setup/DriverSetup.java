@@ -10,8 +10,9 @@ public class DriverSetup {  // DO NOT CHANGE THE CLASS NAME
     
     public static WebDriver getWebDriver() {    // DO NOT CHANGE THE METHOD SIGNATURE
 	
-    	System.setProperty("webdriver.gecko.driver", "path_to_geckodriver.exe");		
+    	System.setProperty("webdriver.gecko.driver", "C:\\Users\\DELL\\Downloads\\geckodriver-v0.36.0-win64\\geckodriver.exe");		
     	driver = new FirefoxDriver();
+    	Hooks.driver = driver;
 	    return driver;
 	}
 }

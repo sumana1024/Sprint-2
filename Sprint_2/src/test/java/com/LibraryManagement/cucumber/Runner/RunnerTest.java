@@ -7,10 +7,15 @@ import io.cucumber.testng.CucumberOptions;
 // CucumberOptions to define features, glue (step definitions) and plugins
 @CucumberOptions(
     features = "src/test/java/com/LibraryManagement/cucumber/features",   // path to .feature files
-    glue = "com.LibraryManagement.cucumber.stepDefinition",                   // package containing step definitions
+    glue = {
+    		"com.LibraryManagement.cucumber.stepDefinition",   
+    		"com.LibraryManagement.cucumber.Setup"
+    },
     plugin = {
         "pretty",
-        "junit:target/cucumber-reports/Cucumber.xml"
+        "junit:target/cucumber-reports/Cucumber.xml",
+        "html:target/cucumber-reports/html-report.html",
+        "json:target/cucumber-reports/report.json"
     },
     tags = "(@AdvancedBookSearch or @BookSearch or @LibraryCard or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
 )
