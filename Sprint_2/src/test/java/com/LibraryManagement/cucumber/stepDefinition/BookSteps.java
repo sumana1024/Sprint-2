@@ -15,7 +15,7 @@ public class BookSteps {
 
     @Given("User navigates to the Library Management Application")
     public void user_navigates_to_the_library_management_application() {
-        driver.get("http://webapps.tekstac.com/SeleniumApp2/Library/Library.html"); // adjust base URL
+        driver.get("http://webapps.tekstac.com/SeleniumApp2/Library/Library.html"); 
     }
 
     @When("User clicks on the {string} section")

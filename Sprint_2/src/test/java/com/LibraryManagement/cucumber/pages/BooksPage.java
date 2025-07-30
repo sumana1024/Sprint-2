@@ -15,12 +15,12 @@ public class BooksPage {
         this.driver = driver;
     }
 
-    private By booksSection = By.id("bookslink"); // adjust if necessary
-    private By searchBox = By.id("searchbox"); // adjust if necessary
+    private By booksSection = By.id("bookslink"); 
+    private By searchBox = By.id("searchbox"); 
     private By bookRows = By.cssSelector("table tbody tr");
     private By noBooksMessage = By.xpath("//*[contains(text(),'No books found')]");
     private By searchBarLabel = By.cssSelector("label[for='searchBox']");
-    private By resetButton = By.id("resetBtn"); // adjust if needed
+    private By resetButton = By.id("resetBtn"); 
 
     public void clickBooksSection() {
         driver.findElement(booksSection).click();
