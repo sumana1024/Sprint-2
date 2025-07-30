@@ -13,7 +13,6 @@ import io.cucumber.testng.CucumberOptions;
         "junit:target/cucumber-reports/Cucumber.xml"
     },
 
-    
 
     tags = "(@AdvancedBookSearch or @BookSearch or @LibraryCard or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
 
