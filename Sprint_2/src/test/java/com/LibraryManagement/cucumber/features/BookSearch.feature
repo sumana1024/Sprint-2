@@ -1,3 +1,4 @@
+@BookSearch
 Feature: View the List of Available Books
 
   Scenario: Verify Available Books List Display in Books Section

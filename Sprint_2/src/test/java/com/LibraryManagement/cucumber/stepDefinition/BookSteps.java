@@ -44,7 +44,7 @@ public class BookSteps {
 
     @Then("Complete list of all available books should reappear")
     public void verifyAllBooksReappear() {
-        Assert.assertTrue("Book list should reappear", booksPage.isFullBookListDisplayed());
+        Assert.assertTrue(booksPage.isFullBookListDisplayed(),"Book list should reappear");
     }
 
     @Given("User navigates to the Books page")
@@ -55,7 +55,8 @@ public class BookSteps {
 
     @Then("The correct book matching the entered name should be displayed")
     public void verifyBookIsDisplayed() {
-        Assert.assertTrue("Book should be displayed", booksPage.isBookDisplayed("Letting Go"));
+        //Assert.assertTrue("Book should be displayed", booksPage.isBookDisplayed("Letting Go"));
+        Assert.assertTrue(booksPage.isBookDisplayed("Letting Go"), "Book should be displayed");
     }
 
     @When("User enters a nonexistent book name into the search box")
@@ -65,12 +66,14 @@ public class BookSteps {
 
     @Then("System should display a message {string}")
     public void systemDisplaysNoBookFoundMessage(String expectedMessage) {
-        Assert.assertTrue("No books found message should be displayed", booksPage.isNoBooksFoundMessageDisplayed());
+        //Assert.assertTrue("No books found message should be displayed", booksPage.isNoBooksFoundMessageDisplayed());
+        Assert.assertTrue(booksPage.isNoBooksFoundMessageDisplayed(), "No books found message should be displayed");
     }
 
     @Then("The search bar should clearly indicate {string}")
     public void searchBarShouldIndicateLabel(String expectedLabel) {
-        Assert.assertTrue("Search label is correct", booksPage.isSearchBarLabelCorrect());
+        //Assert.assertTrue("Search label is correct", booksPage.isSearchBarLabelCorrect());
+        Assert.assertTrue(booksPage.isSearchBarLabelCorrect(), "Search label is correct");
     }
 
     @And("User clicks the Reset button")
@@ -80,6 +83,7 @@ public class BookSteps {
 
     @Then("All input fields should be cleared and complete list of books displayed")
     public void verifyResetClearsFieldsAndRestoresBooks() {
-        Assert.assertTrue("Books list should be visible after reset", booksPage.isFullBookListDisplayed());
+        //Assert.assertTrue("Books list should be visible after reset", booksPage.isFullBookListDisplayed());
+        Assert.assertTrue(booksPage.isFullBookListDisplayed(), "Books list should be visible after reset");
     }
 }

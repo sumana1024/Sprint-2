@@ -19,9 +19,11 @@ import io.cucumber.testng.CucumberOptions;
     },
 
 
-    tags = "(@AdvancedBookSearch or @BookSearch or @LibraryCard or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
+    tags = "(@BookSearch) and (not @ignore)" // optional filtering
 
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
     // No code needed here, TestNG will run with the above configurations
 }
+
+//@AdvancedBookSearch or @BookSearch or @ServiceQuery or @Membership
