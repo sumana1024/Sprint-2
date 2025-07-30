@@ -9,21 +9,23 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/test/java/com/LibraryManagement/cucumber/features",   // path to .feature files
     glue = {
     		"com.LibraryManagement.cucumber.stepDefinition",   
-    		"com.LibraryManagement.cucumber.Setup"
+    		"com.LibraryManagement.cucumber.Setup",
+    		"com.LibraryManagement.cucumber.hooks"
     },
     plugin = {
         "pretty",
         "junit:target/cucumber-reports/Cucumber.xml",
         "html:target/cucumber-reports/html-report.html",
-        "json:target/cucumber-reports/report.json"
+        "json:target/cucumber-reports/report.json",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+
     },
 
 
-    tags = "(@BookSearch) and (not @ignore)" // optional filtering
+    tags = "(@AdvancedBookSearch or @BookSearch or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
 
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
     // No code needed here, TestNG will run with the above configurations
 }
 
-//@AdvancedBookSearch or @BookSearch or @ServiceQuery or @Membership
