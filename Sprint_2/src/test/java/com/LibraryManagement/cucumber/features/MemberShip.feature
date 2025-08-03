@@ -29,7 +29,7 @@ Feature: Apply for Library Membership
   Scenario: Select Gold Membership and verify amount
     Given I navigate to the Library Membership page
     When I complete the human verification
-    When I select Gold Membership
+    And I select Gold Membership
     Then Gold Membership should be selected
     And Displayed amount should be Rs.5000
 
@@ -37,70 +37,31 @@ Feature: Apply for Library Membership
   Scenario: Select Platinum Membership and verify amount
     Given I navigate to the Library Membership page
     When I complete the human verification
-    When I select Platinum Membership
+    And I select Platinum Membership
     Then Platinum Membership should be selected
     And Displayed amount should be Rs.25000
 
-  @TCM006
-  Scenario: Submit form with Gold Membership and valid card
+  @TCM_BULK_SUBMIT
+  Scenario: Submit membership form with multiple entries
     Given I navigate to the Library Membership page
     And I complete the human verification
-    When I select Gold Membership
-    And I enter card number "LCN_002"
-    And I click Submit
-    Then Form should submit successfully
-
-  @TCM007
-  Scenario: Submit form with Platinum Membership and valid card
+    When I submit the following membership entries:
+      | MembershipType | CardNumber | ExpectedMessage                      |
+      | Gold           | LCN_002    | Membership Added                     |
+      | Platinum       | LCN_003    | Membership Added                     |
+      | Gold           |            | Please Enter Your Card number        |
+      | Platinum       |            | Please Enter Your Card number        |
+      | Gold           | LCN_004    | Membership Added (Reset Expected)    |
+  
+  @TCM_DUPLICATE_CARD
+  Scenario: Submit duplicate card number and expect rejection
     Given I navigate to the Library Membership page
     And I complete the human verification
-    When I select Platinum Membership
-    And I enter card number "LCN_003"
-    And I click Submit
-    Then Form should submit successfully
-
-  @TCM008
-  Scenario: Submit Gold Membership with empty card number
-    Given I navigate to the Library Membership page
-    And I complete the human verification
-    When I select Gold Membership
-    And I leave card number empty
-    And I click Submit
-    Then Error message should appear for required field
-
-  @TCM009
-  Scenario: Submit Platinum Membership with empty card number
-    Given I navigate to the Library Membership page
-    And I complete the human verification
-    When I select Platinum Membership
-    And I leave card number empty
-    And I click Submit
-    Then Error message should appear for required field
-
-  @TCM010
-  Scenario: Verify card number field resets after successful submission
-    Given I navigate to the Library Membership page
-    And I complete the human verification
-    When I select Gold Membership
-    And I enter card number "LCN_004"
-    And I click Submit
-    Then Form should submit successfully
-    And Card number field should be reset
-
-  @TCM011
-  Scenario: Prevent reuse of card number for different memberships
-    Given I navigate to the Library Membership page
-    And I complete the human verification
-    When I select Gold Membership
-    And I enter card number "LCN_005"
-    And I click Submit
-    And I wait for confirmation message
-    And I complete the human verification again
-    And I select Platinum Membership
-    And I enter card number "LCN_005"
-    And I click Submit
-    Then Error message should appear for duplicate number
-    
+    When I submit the following membership entries:
+      | MembershipType | CardNumber | ExpectedMessage |
+      | Gold           | LCN_005    | Membership Added |
+      | Platinum       | LCN_005    | already          |
+  
   @TCME001
   Scenario: View Members with Memberships
     Given I navigate to the Library Membership page

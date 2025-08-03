@@ -3,7 +3,7 @@ package com.LibraryManagement.cucumber.pages;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.Alert;
+//import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 //import org.openqa.selenium.TimeoutException;
@@ -250,7 +250,23 @@ public class MembershipPage {
         return driver.getCurrentUrl();
     }
 
-    
+    public int countCardOccurrences(String cardNumber) {
+        try {
+            WebElement table = driver.findElement(By.id("memberTable"));
+            List<WebElement> rows = table.findElements(By.tagName("tr"));
+            int count = 0;
+            for (WebElement row : rows) {
+                List<WebElement> cells = row.findElements(By.tagName("td"));
+                if (!cells.isEmpty() && cells.get(0).getText().equalsIgnoreCase(cardNumber)) {
+                    count++;
+                }
+            }
+            return count;
+        } catch (Exception e) {
+            return 0;
+        }
+    }
+
     
 
 }

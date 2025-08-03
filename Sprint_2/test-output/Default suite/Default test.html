@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>22/13/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jul 30 21:54:10 IST 2025</td>
+<td>Started on:</td><td>Sun Aug 03 10:53:24 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>481 seconds (481528 ms)</td>
+<tr><td>Total time:</td><td>73 seconds (73153 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,314 +76,42 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with invalid email id", "Contact and Query resolving services"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid email message not displayed]&gt; but was:&lt;[Mail Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:79)
-	at ✽.I should see an error message for invalid email(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:31)
-</pre></div><a href='#' onClick='toggleBox("stack-trace199263201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace199263201'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid email message not displayed]&gt; but was:&lt;[Mail Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:79)
-	at ✽.I should see an error message for invalid email(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:31)
-</pre></div></td>
-<td>18</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate search bar labeling for clarity on searchable fields", "View the List of Available Books"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: label[for=&apos;searchBox&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [ae0d9981-07da-44ed-8681-024247953312, findElement {value=label[for=&apos;searchBox&apos;], using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 26296, moz:profile: C:\Users\DELL\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: ae0d9981-07da-44ed-8681-024247953312
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.LibraryManagement.cucumber.pages.BooksPage.isSearchBarLabelCorrect(BooksPage.java:53)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.searchBarShouldIndicateLabel(BookSteps.java:76)
-	at ✽.The search bar should clearly indicate &quot;Search by Book Name or Author&quot;(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:24)
-</pre></div><a href='#' onClick='toggleBox("stack-trace797724590", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace797724590'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: label[for=&apos;searchBox&apos;]
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [ae0d9981-07da-44ed-8681-024247953312, findElement {value=label[for=&apos;searchBox&apos;], using=css selector}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 26296, moz:profile: C:\Users\DELL\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: ae0d9981-07da-44ed-8681-024247953312
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.LibraryManagement.cucumber.pages.BooksPage.isSearchBarLabelCorrect(BooksPage.java:53)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.searchBarShouldIndicateLabel(BookSteps.java:76)
-	at ✽.The search bar should clearly indicate &quot;Search by Book Name or Author&quot;(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:24)
-</pre></div></td>
-<td>5</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with invalid phone number", "Contact and Query resolving services"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid phone message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:94)
-	at ✽.I should see an error message for invalid phone(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:60)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1782473530", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1782473530'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid phone message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:94)
-	at ✽.I should see an error message for invalid phone(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:60)
-</pre></div></td>
-<td>24</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH005 - Validate Books By Selected Author Displayed In Search", "Advanced Search of Book by Multiple Filters"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_author(AdvancedBookSearchSteps.java:96)
-	at ✽.I should see a table containing details of all the available books by the selected author(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:49)
-</pre></div><a href='#' onClick='toggleBox("stack-trace475526834", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace475526834'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_author(AdvancedBookSearchSteps.java:96)
-	at ✽.I should see a table containing details of all the available books by the selected author(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:49)
-</pre></div></td>
-<td>11</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH004 - Validate Error Message For Searching Non Existent Book", "Advanced Search of Book by Multiple Filters"</td>
-<td><div><pre>java.lang.AssertionError: =====Test failed: No new elements appeared after form submission.=====
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_no_results_error(AdvancedBookSearchSteps.java:90)
-	at ✽.I should see an appropriate error message indicating no results found(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:42)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1692036285", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1692036285'><pre>java.lang.AssertionError: =====Test failed: No new elements appeared after form submission.=====
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_no_results_error(AdvancedBookSearchSteps.java:90)
-	at ✽.I should see an appropriate error message indicating no results found(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:42)
-</pre></div></td>
-<td>11</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Reset button clears search fields and restores full book list", "View the List of Available Books"</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #resetBtn
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5aaa1720-d4cc-4e23-872c-855e70420a4b, findElement {value=resetBtn, using=id}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27592, moz:profile: C:\Users\DELL\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 5aaa1720-d4cc-4e23-872c-855e70420a4b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.LibraryManagement.cucumber.pages.BooksPage.clickResetButton(BooksPage.java:59)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.userClicksResetButton(BookSteps.java:81)
-	at ✽.User clicks the Reset button(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:30)
-</pre></div><a href='#' onClick='toggleBox("stack-trace88286953", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace88286953'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: #resetBtn
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.22.0&apos;, revision: &apos;c5f3146703*&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [5aaa1720-d4cc-4e23-872c-855e70420a4b, findElement {value=resetBtn, using=id}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 141.0, moz:accessibilityChecks: false, moz:buildID: 20250717180000, moz:geckodriverVersion: 0.36.0, moz:headless: false, moz:platformVersion: 10.0, moz:processID: 27592, moz:profile: C:\Users\DELL\AppData\Local..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, userAgent: Mozilla/5.0 (Windows NT 10....}
-Session ID: 5aaa1720-d4cc-4e23-872c-855e70420a4b
-	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-	at com.LibraryManagement.cucumber.pages.BooksPage.clickResetButton(BooksPage.java:59)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.userClicksResetButton(BookSteps.java:81)
-	at ✽.User clicks the Reset button(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:30)
-</pre></div></td>
-<td>6</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with invalid name", "Contact and Query resolving services"</td>
-<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid name message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:109)
-	at ✽.I should see an error message for invalid name(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:90)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1188371806", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1188371806'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid name message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:109)
-	at ✽.I should see an error message for invalid name(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:90)
-</pre></div></td>
-<td>26</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH006 - Validate Books By Selected Subject Displayed In Search", "Advanced Search of Book by Multiple Filters"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_subject(AdvancedBookSearchSteps.java:101)
-	at ✽.I should see a table containing details of all the available books of the selected subject(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:56)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1310865036", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1310865036'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_subject(AdvancedBookSearchSteps.java:101)
-	at ✽.I should see a table containing details of all the available books of the selected subject(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:56)
-</pre></div></td>
-<td>11</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate system behavior when searching for a nonexistent book", "View the List of Available Books"</td>
-<td><div><pre>java.lang.AssertionError: No books found message should be displayed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.systemDisplaysNoBookFoundMessage(BookSteps.java:70)
-	at ✽.System should display a message &quot;No books found&quot;(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:20)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1117812847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1117812847'><pre>java.lang.AssertionError: No books found message should be displayed expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.LibraryManagement.cucumber.stepDefinition.BookSteps.systemDisplaysNoBookFoundMessage(BookSteps.java:70)
-	at ✽.System should display a message &quot;No books found&quot;(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/BookSearch.feature:20)
-</pre></div></td>
-<td>6</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Prevent reuse of card number for different memberships", "Apply for Library Membership"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.duplicateErrorMessage(MembershipSteps.java:164)
-	at ✽.Error message should appear for duplicate number(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:102)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1238166297", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1238166297'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.duplicateErrorMessage(MembershipSteps.java:164)
-	at ✽.Error message should appear for duplicate number(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:102)
-</pre></div></td>
-<td>12</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH007 - Validate Books By Selected Book Format Displayed In Search", "Advanced Search of Book by Multiple Filters"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_format(AdvancedBookSearchSteps.java:106)
-	at ✽.I should see a table containing details of all the available books of the selected book format(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:63)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1741997197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1741997197'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_format(AdvancedBookSearchSteps.java:106)
-	at ✽.I should see a table containing details of all the available books of the selected book format(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:63)
-</pre></div></td>
-<td>11</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify card number field resets after successful submission", "Apply for Library Membership"</td>
-<td><div><pre>java.lang.AssertionError: Card number field is not reset expected [] but found [LCN_004]
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit membership form with multiple entries", "Apply for Library Membership"</td>
+<td><div><pre>java.lang.AssertionError: Card number field is not reset after submission expected [] but found [LCN_004]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.verifyFieldReset(MembershipSteps.java:151)
-	at ✽.Card number field should be reset(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:88)
-</pre></div><a href='#' onClick='toggleBox("stack-trace589884531", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace589884531'><pre>java.lang.AssertionError: Card number field is not reset expected [] but found [LCN_004]
+	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:225)
+	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:48)
+</pre></div><a href='#' onClick='toggleBox("stack-trace631851861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace631851861'><pre>java.lang.AssertionError: Card number field is not reset after submission expected [] but found [LCN_004]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
 	at org.testng.Assert.assertEquals(Assert.java:132)
 	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.verifyFieldReset(MembershipSteps.java:151)
-	at ✽.Card number field should be reset(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:88)
+	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:225)
+	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:48)
 </pre></div></td>
 <td>14</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH008 - Validate Books By Selected Age Group Displayed In Search", "Advanced Search of Book by Multiple Filters"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit duplicate card number and expect rejection", "Apply for Library Membership"</td>
+<td><div><pre>java.lang.AssertionError: Duplicate card number [LCN_005] was accepted more than once expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_age_group(AdvancedBookSearchSteps.java:111)
-	at ✽.I should see a table containing details of all the available books of the selected age group(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:70)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1205817409", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1205817409'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:235)
+	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:60)
+</pre></div><a href='#' onClick='toggleBox("stack-trace279023166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace279023166'><pre>java.lang.AssertionError: Duplicate card number [LCN_005] was accepted more than once expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_age_group(AdvancedBookSearchSteps.java:111)
-	at ✽.I should see a table containing details of all the available books of the selected age group(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:70)
+	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:235)
+	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:60)
 </pre></div></td>
 <td>11</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
@@ -397,84 +125,14 @@ Session ID: 5aaa1720-d4cc-4e23-872c-855e70420a4b
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate only one option selection in service page", "Contact and Query resolving services"</td>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with no drag-drop action", "Apply for Library Membership"</td>
 <td></td>
-<td>15</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with blank phone number", "Contact and Query resolving services"</td>
-<td></td>
-<td>18</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with valid name", "Contact and Query resolving services"</td>
-<td></td>
-<td>31</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit form with Platinum Membership and valid card", "Apply for Library Membership"</td>
-<td></td>
-<td>10</td>
+<td>9</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
 <td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Members with Memberships", "Apply for Library Membership"</td>
 <td></td>
-<td>10</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH003 - Validate All Details of the Searched Book Displayed", "Advanced Search of Book by Multiple Filters"</td>
-<td></td>
-<td>5</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with valid email id", "Contact and Query resolving services"</td>
-<td></td>
-<td>15</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify Available Books List Display in Books Section", "View the List of Available Books"</td>
-<td></td>
-<td>6</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with blank email id", "Contact and Query resolving services"</td>
-<td></td>
-<td>12</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH002 - Validate All Mandatory Fields", "Advanced Search of Book by Multiple Filters"</td>
-<td></td>
-<td>5</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate correct book is fetched when searching by book name", "View the List of Available Books"</td>
-<td></td>
-<td>5</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with blank name", "Contact and Query resolving services"</td>
-<td></td>
-<td>48</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with incorrect drop location", "Apply for Library Membership"</td>
-<td></td>
-<td>8</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with no drag-drop action", "Apply for Library Membership"</td>
-<td></td>
-<td>12</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Gold Membership with empty card number", "Apply for Library Membership"</td>
-<td></td>
-<td>10</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TCSH001 - Validate Available Book Displayed On Search", "Advanced Search of Book by Multiple Filters"</td>
-<td></td>
-<td>6</td>
+<td>7</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
 <td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful Human Verification via drag and drop", "Apply for Library Membership"</td>
@@ -482,29 +140,19 @@ Session ID: 5aaa1720-d4cc-4e23-872c-855e70420a4b
 <td>6</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select Platinum Membership and verify amount", "Apply for Library Membership"</td>
-<td></td>
-<td>12</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit form with Gold Membership and valid card", "Apply for Library Membership"</td>
-<td></td>
-<td>12</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with valid phone number", "Contact and Query resolving services"</td>
-<td></td>
-<td>19</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
 <td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select Gold Membership and verify amount", "Apply for Library Membership"</td>
 <td></td>
-<td>13</td>
+<td>6</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit Platinum Membership with empty card number", "Apply for Library Membership"</td>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select Platinum Membership and verify amount", "Apply for Library Membership"</td>
 <td></td>
-<td>10</td>
+<td>7</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with incorrect drop location", "Apply for Library Membership"</td>
+<td></td>
+<td>6</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 </table><p>
 </body>

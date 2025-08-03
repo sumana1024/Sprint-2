@@ -3,7 +3,8 @@ package com.LibraryManagement.cucumber.stepDefinition;
 import io.cucumber.java.en.*;
 
 import java.time.Duration;
-
+import java.util.List;
+import java.util.Map;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.TimeoutException;
@@ -188,6 +189,55 @@ public class MembershipSteps {
     public void noMembersInTable() {
         Assert.assertTrue(membershipPage.isEmpty(), "Table is not empty");
     }
+    
+    
+    
+    @When("I submit the following membership entries:")
+    public void submitMembershipEntries(io.cucumber.datatable.DataTable dataTable) throws InterruptedException {
+        List<Map<String, String>> entries = dataTable.asMaps(String.class, String.class);
+        for (Map<String, String> entry : entries) {
+            String membershipType = entry.get("MembershipType");
+            String cardNumber = entry.get("CardNumber");
+            String expectedMessage = entry.get("ExpectedMessage");
+
+            // Select membership
+            if (membershipType.equalsIgnoreCase("Gold")) {
+                membershipPage.selectGoldMembership();
+            } else {
+                membershipPage.selectPlatinumMembership();
+            }
+            selectedMembership = membershipType;
+
+            // Enter card number (can be empty)
+            membershipPage.enterLibraryCardNumber(membershipType, cardNumber);
+            membershipPage.submitMembershipForm();
+            Thread.sleep(1000); // Wait for message or error
+
+            if (expectedMessage.contains("Membership Added")) {
+                String actualMessage = membershipPage.getSuccessMessage();
+                Assert.assertTrue(actualMessage.contains("Membership Added"), "Expected success message not found!");
+
+                // 🔁 Reset field verification
+                if (expectedMessage.contains("Reset Expected")) {
+                    String cardFieldValue = membershipType.equalsIgnoreCase("Gold")
+                            ? membershipPage.getGoldCardFieldValue()
+                            : membershipPage.getPlatinumCardFieldValue();
+                    Assert.assertEquals(cardFieldValue, "", "Card number field is not reset after submission");
+                }
+            } else if (expectedMessage.contains("Please Enter Your Card number")) {
+                String errorMsg = membershipType.equalsIgnoreCase("Gold")
+                        ? membershipPage.getGoldCardErrorMessage()
+                        : membershipPage.getPlatinumCardErrorMessage();
+                Assert.assertTrue(errorMsg.contains("Please Enter Your Card number"), "Missing required error message.");
+            } else if (expectedMessage.contains("already")) {
+                membershipPage.goToMembers();
+                int count = membershipPage.countCardOccurrences(cardNumber);
+                Assert.assertTrue(count == 1, "Duplicate card number [" + cardNumber + "] was accepted more than once");
+            }
+        }
+    }
+
+
 
 
 

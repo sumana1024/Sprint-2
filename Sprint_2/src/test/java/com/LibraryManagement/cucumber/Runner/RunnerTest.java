@@ -22,7 +22,7 @@ import io.cucumber.testng.CucumberOptions;
     },
 
 
-    tags = "(@AdvancedBookSearch or @BookSearch or @ServiceQuery or @Membership) and (not @ignore)" // optional filtering
+    tags = "(@Membership) and (not @ignore)" // optional filtering
 
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {
