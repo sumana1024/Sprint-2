@@ -10,9 +10,9 @@ This project is a complete test automation solution tailored for validating key 
 ## Functional Modules Under Test
 ### Advanced Book Search
 - Book search functionality with multiple filters
-- Search by author name, subject, edition, format, and age group
-- Input validation for required fields
-- "All Books" section for browsing the complete collection
+- Search by author name, subject, edition, format and age group
+- Validation of all mandatory fields for searching books
+- "Search" section helps in searching all types of books
 ### Book Search
 - Implements a search bar for books with live filtering by name or author.
 - Displays appropriate feedback for both valid and invalid search inputs.
