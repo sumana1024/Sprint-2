@@ -4,72 +4,73 @@ import com.LibraryManagement.cucumber.pages.AdvancedBookSearchPage;
 
 import io.cucumber.java.en.*;
 import static org.testng.Assert.assertTrue;
+import io.cucumber.datatable.DataTable;
 import java.util.Map;
 
 public class AdvancedBookSearchSteps {
 
+	//Page Object instance for interacting with the Advanced Search page
 	AdvancedBookSearchPage searchPage = new AdvancedBookSearchPage();
 
+	//Navigates to the Search section of the Library application
     @Given("I navigate to the {string} section of the application")
     public void i_navigate_to_the_section_of_the_application(String section) {
     	searchPage.openSite();
         searchPage.navigateToSearch();
         System.out.println("I navigated to the Search section of the application");
     }
+    
+    //Fill the Advanced Book Search form using data provided in the DataTable.
+    @When("I provide the following book search details:")
+    public void i_provide_the_following_book_search_details(DataTable dataTable) {
+        Map<String, String> data = dataTable.asMap();
 
-    @When("I enter {string} in the Author Name field")
-    public void i_enter_author_name(String author) {
-        searchPage.enterAuthor(author);
-        System.out.println("I entered Author Name: "+author);
+        if (data.containsKey("Author")) {
+            searchPage.enterAuthor(data.get("Author"));
+        }
+        if (data.containsKey("Subject")) {
+            searchPage.enterSubject(data.get("Subject"));
+        }
+        if (data.containsKey("Edition")) {
+            searchPage.selectEdition(data.get("Edition"));
+        }
+        if (data.containsKey("Format")) {
+            searchPage.selectBookFormat(data.get("Format"));
+        }
+        if (data.containsKey("AgeGroup")) {
+            searchPage.selectAgeGroup(data.get("AgeGroup"));
+        }
+        System.out.println("I provide details of book to search");
     }
-
-    @When("I enter {string} in the Subject field")
-    public void i_enter_subject(String subject) {
-        searchPage.enterSubject(subject);
-        System.out.println("I entered Subject: "+subject);
-    }
-
-    @When("I select {string} from the Edition dropdown list")
-    public void i_select_edition(String edition) {
-        searchPage.selectEdition(edition);
-        System.out.println("I selected Edition: "+edition);
-    }
-
-    @When("I select {string} from the Book Format dropdown list")
-    public void i_select_book_format(String format) {
-        searchPage.selectBookFormat(format);
-        System.out.println("I selected Book Format: "+format);
-    }
-
-    @When("I select {string} from the Age Group radio buttons")
-    public void i_select_age_group(String group) {
-        searchPage.selectAgeGroup(group);
-        System.out.println("I selected Age Group: "+group);
-    }
-
+    
+    //Clicks the Submit button to execute the search.
     @When("I click the Submit button")
     public void i_click_submit_button() {
         searchPage.clickSubmit();
         System.out.println("I clicked the Submit button");
     }
 
+    //Validates that a result table is displayed after performing a search.
     @Then("I should see a table containing details of the book searched")
     public void i_should_see_book_details() {
         assertTrue(searchPage.isResultsTableDisplayed());
         System.out.println("=====Test Pass: I saw a table containing details of the book searched=====");
     }
 
+    //Leaves all fields blank 
     @When("I leave all fields blank")
     public void i_leave_all_fields_blank() {
         System.out.println("I left all fields blank");
     }
 
+    //Validates that error messages are displayed for all mandatory fields.
     @Then("I should see appropriate error messages for all mandatory fields")
     public void i_should_see_error_messages() {
         assertTrue(searchPage.isErrorMessageDisplayed());
         System.out.println("=====Test Pass: Error message displayed for all mandatory fields=====");
     }
 
+    //Validates that all the details of the searched book match expected values.
     @Then("I should see a table containing all the details of the book searched")
     public void i_should_see_all_book_details() {
         Map<String, String> actualDetails=searchPage.getDisplayedBookDetails();
@@ -83,6 +84,7 @@ public class AdvancedBookSearchSteps {
         System.out.println("======Test Pass: I saw a table containing all the details of the book searched======");
     }
 
+    //Verifies that an appropriate error message or some indication is shown when no book is found.
     @Then("I should see an appropriate error message indicating no results found")
     public void i_should_see_no_results_error() {
         if (!searchPage.isErrorMessageDisplayedNoBooksFound()) 
@@ -91,21 +93,25 @@ public class AdvancedBookSearchSteps {
         }
     }
 
+    //Validates that search results include all available books by the selected author.
     @Then("I should see a table containing details of all the available books by the selected author")
     public void i_should_see_books_by_author() {
         assertTrue(searchPage.isResultsTableDisplayed());
     }
 
+    //Validates that search results include all available books with the selected subject.
     @Then("I should see a table containing details of all the available books of the selected subject")
     public void i_should_see_books_by_subject() {
         assertTrue(searchPage.isResultsTableDisplayed());
     }
 
+    //Validates that search results include all available books of the selected book format.
     @Then("I should see a table containing details of all the available books of the selected book format")
     public void i_should_see_books_by_format() {
         assertTrue(searchPage.isResultsTableDisplayed());
     }
 
+    //Validates that search results include all available books for the selected age group.
     @Then("I should see a table containing details of all the available books of the selected age group")
     public void i_should_see_books_by_age_group() {
         assertTrue(searchPage.isResultsTableDisplayed());

@@ -1,6 +1,5 @@
 package com.LibraryManagement.cucumber.Runner;
 
-
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
@@ -21,8 +20,7 @@ import io.cucumber.testng.CucumberOptions;
 
     },
 
-
-    tags = "(@ServiceQuery) and (not @ignore)" // optional filtering
+    tags = "(@AdvanceBookSearch or @Membership or @ServiceQuery or @BookSearch) and (not @ignore)" // optional filtering
 
 )
 public class RunnerTest extends AbstractTestNGCucumberTests {

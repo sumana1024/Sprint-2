@@ -5,13 +5,12 @@ import com.LibraryManagement.cucumber.Setup.DriverSetup;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.time.Duration;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.time.Duration;
 
 public class AdvancedBookSearchPage {
     WebDriver driver;
@@ -24,54 +23,63 @@ public class AdvancedBookSearchPage {
         return driver;
     }
 
+    //Opens the Library application site and maximizes the browser window.
     public void openSite() {
         driver.get("http://webapps.tekstac.com/SeleniumApp2/Library/Library.html");
         driver.manage().window().maximize();
     }
     
+    //Navigates to the "Search" section by clicking the search link.
     public void navigateToSearch() {
     	 driver.findElement(By.id("searchlink")).click();
     }
 
+    //Enters the author's name in the Author Name field.
     public void enterAuthor(String author) {
         driver.findElement(By.id("authorName")).sendKeys(author);
     }
 
+    //Enters the book subject in the Subject field.
     public void enterSubject(String subject) {
         driver.findElement(By.id("subject")).sendKeys(subject);
     }
 
+    //Selects an edition from the Edition dropdown list.
     public void selectEdition(String edition) {
         new Select(driver.findElement(By.id("edition"))).selectByVisibleText(edition);
     }
 
+    //Selects a format from the Book Format dropdown list.
     public void selectBookFormat(String format) {
         new Select(driver.findElement(By.id("format"))).selectByVisibleText(format);
     }
 
+    //Selects an age group from the Age Group radio buttons.
     public void selectAgeGroup(String group) {
         driver.findElement(By.cssSelector("input[name='ageGroup'][value='" +group+ "']")).click();
     }
 
+    //Clicks the Submit button to perform the search.
     public void clickSubmit() {
         driver.findElement(By.id("searchSubmit")).click();
     }
 
+    //Waits for and verifies if the results table is displayed after form submission.
     public boolean isResultsTableDisplayed() {
-    	//WebDriverWait wait = new WebDriverWait(driver, 5); // 5 seconds
     	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
-    	    try 
-    	    {
-    	        WebElement table=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bookscontainer table")));
-    	        return table.isDisplayed();
-    	    } 
-    	    catch (TimeoutException e) 
-    	    {
-    	        System.out.println("=====Test failed: Table not displayed after form submission.=====");
-    	        return false;
-    	    }
+	    try 
+	    {
+	        WebElement table=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bookscontainer table")));
+	        return table.isDisplayed();
+	    } 
+	    catch (TimeoutException e) 
+	    {
+	        System.out.println("=====Test failed: Table not displayed after form submission.=====");
+	        return false;
+	    }
     }
 
+    //Verifies that all mandatory field error messages are displayed when fields are left blank.
     public boolean isErrorMessageDisplayed() {
       
         //error message for author name field
@@ -92,20 +100,23 @@ public class AdvancedBookSearchPage {
                isAgeGroupErrorDisplayed;
     }
     
+    //Extracts and returns the displayed book details from the result table.
     public Map<String, String> getDisplayedBookDetails() {
         Map<String, String> bookDetails=new HashMap<>();
 
+        //Capture book detail values from the table
         // Author
         String author=driver.findElement(By.xpath("//td[text()='Author']/following-sibling::td")).getText();
-        // Edition
+        //Edition
         String edition=driver.findElement(By.xpath("//td[text()='Edition']/following-sibling::td")).getText();
-        // Subject
+        //Subject
         String subject=driver.findElement(By.xpath("//td[text()='Subject']/following-sibling::td")).getText();
-        // Format
+        //Format
         String format=driver.findElement(By.xpath("//td[text()='Format']/following-sibling::td")).getText();
-        // Age
+        //Age Group
         String age=driver.findElement(By.xpath("//td[text()='Age']/following-sibling::td")).getText();
 
+        //Store values in the map
         bookDetails.put("Author", author);
         bookDetails.put("Edition", edition);
         bookDetails.put("Subject", subject);
@@ -115,26 +126,26 @@ public class AdvancedBookSearchPage {
         return bookDetails;
     }
     
+    //Detects whether an error message or any UI change is triggered when a non-existent book is searched.
     public boolean isErrorMessageDisplayedNoBooksFound() {
         
-    	// Step 1: Capture current DOM state
+    	//Capture the initial state of the DOM
         List<WebElement> before = driver.findElements(By.xpath("//*"));
 
-        // Step 2: Wait up to 5 seconds for new elements
-        //WebDriverWait wait=new WebDriverWait(driver, 5);
+        //Wait up to 5 seconds for new elements
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(5));
         boolean newElementsAppeared=false;
 
         try 
         {
-            newElementsAppeared=wait.until(driver1 ->driver1.findElements(By.xpath("//*")).size() > before.size());
+            newElementsAppeared=wait.until(driver1 ->driver1.findElements(By.xpath("//*")).size() > before.size()); //Wait for DOM to change 
         } 
         catch (Exception e) 
         {
-            newElementsAppeared=false;  // Timeout or error
+            newElementsAppeared=false; //Timeout or error
         }
 
-        // Step 3: Compare if any new elements appeared
+        //Compare if any new elements appeared
         List<WebElement> after=driver.findElements(By.xpath("//*"));
         int newElementsCount=after.size() - before.size();
 

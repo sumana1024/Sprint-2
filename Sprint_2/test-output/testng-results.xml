@@ -1,230 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="7" failed="3" skipped="0">
+<testng-results ignored="0" total="8" passed="3" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-04T16:25:24 IST" name="Suite" finished-at="2025-08-04T16:26:45 IST" duration-ms="81544">
+  <suite started-at="2025-08-04T23:38:55 IST" name="Default suite" finished-at="2025-08-04T23:40:08 IST" duration-ms="72647">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-08-04T16:25:24 IST" name="Test" finished-at="2025-08-04T16:26:45 IST" duration-ms="81544">
+    <test started-at="2025-08-04T23:38:55 IST" name="Default test" finished-at="2025-08-04T23:40:08 IST" duration-ms="72647">
       <class name="com.LibraryManagement.cucumber.Runner.RunnerTest">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:24 IST" name="setUpClass" finished-at="2025-08-04T16:25:24 IST" duration-ms="603" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:38:55 IST" name="setUpClass" finished-at="2025-08-04T23:38:56 IST" duration-ms="863" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@58cbafc2]]>
+                <![CDATA[org.testng.TestRunner@147efd9]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:25:29 IST" duration-ms="4769" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:38:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:02 IST" duration-ms="5708" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate only one option selection in service page"]]>
+                <![CDATA["TCSH001 - Validate Available Book Displayed On Search"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:29 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:25:37 IST" duration-ms="8249" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:07 IST" duration-ms="4628" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Email option with different email inputs"]]>
+                <![CDATA["TCSH002 - Validate All Mandatory Fields"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:25:46 IST" duration-ms="8306" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:14 IST" duration-ms="6836" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Email option with invalid email id"]]>
+                <![CDATA["TCSH003 - Validate All Details of the Searched Book Displayed"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
-          <exception class="org.junit.ComparisonFailure">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:14 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:24 IST" duration-ms="10874" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TCSH004 - Validate Error Message For Searching Non Existent Book"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected:<[Invalid email message not displayed]> but was:<[Mail Sent Successfully]>]]>
+              <![CDATA[=====Test failed: No new elements appeared after form submission.=====]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid email message not displayed]> but was:<[Mail Sent Successfully]>
-at org.junit.Assert.assertEquals(Assert.java:117)
-at org.junit.Assert.assertEquals(Assert.java:146)
-at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:78)
-at ✽.I should see an error message for invalid email(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:35)
+              <![CDATA[java.lang.AssertionError: =====Test failed: No new elements appeared after form submission.=====
+at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_no_results_error(AdvancedBookSearchSteps.java:92)
+at ✽.I should see an appropriate error message indicating no results found(file:///C:/Users/Esha/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:45)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:25:54 IST" duration-ms="8076" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:35 IST" duration-ms="10162" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Email option with blank email id"]]>
+                <![CDATA["TCSH005 - Validate Books By Selected Author Displayed In Search"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:25:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:02 IST" duration-ms="8158" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Chat section with valid phone number"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Contact and Query resolving services"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:02 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:10 IST" duration-ms="8568" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Chat section with invalid phone number"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Contact and Query resolving services"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.junit.ComparisonFailure">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected:<[Invalid phone message not displayed]> but was:<[Message Sent Successfully]>]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid phone message not displayed]> but was:<[Message Sent Successfully]>
-at org.junit.Assert.assertEquals(Assert.java:117)
-at org.junit.Assert.assertEquals(Assert.java:146)
-at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:93)
-at ✽.I should see an error message for invalid phone(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:65)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_author(AdvancedBookSearchSteps.java:99)
+at ✽.I should see a table containing details of all the available books by the selected author(file:///C:/Users/Esha/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:53)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:10 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:19 IST" duration-ms="8568" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:45 IST" duration-ms="10476" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Chat section with blank phone number"]]>
+                <![CDATA["TCSH006 - Validate Books By Selected Subject Displayed In Search"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:19 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:27 IST" duration-ms="8429" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Chat section with valid name"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Contact and Query resolving services"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:36 IST" duration-ms="8710" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Validate Chat section with invalid name"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Contact and Query resolving services"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.junit.ComparisonFailure">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected:<[Invalid name message not displayed]> but was:<[Message Sent Successfully]>]]>
+              <![CDATA[expected [true] but found [false]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.junit.ComparisonFailure: expected:<[Invalid name message not displayed]> but was:<[Message Sent Successfully]>
-at org.junit.Assert.assertEquals(Assert.java:117)
-at org.junit.Assert.assertEquals(Assert.java:146)
-at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:108)
-at ✽.I should see an error message for invalid name(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:95)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_subject(AdvancedBookSearchSteps.java:105)
+at ✽.I should see a table containing details of all the available books of the selected subject(file:///C:/Users/Esha/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:61)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.junit.ComparisonFailure -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T16:26:45 IST" duration-ms="8539" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:39:56 IST" duration-ms="10730" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Validate Chat section with blank name"]]>
+                <![CDATA["TCSH007 - Validate Books By Selected Book Format Displayed In Search"]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA["Contact and Query resolving services"]]>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_format(AdvancedBookSearchSteps.java:111)
+at ✽.I should see a table containing details of all the available books of the selected book format(file:///C:/Users/Esha/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:69)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e]" started-at="2025-08-04T16:26:45 IST" name="tearDownClass" finished-at="2025-08-04T16:26:45 IST" duration-ms="504" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:39:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-08-04T23:40:07 IST" duration-ms="10860" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["TCSH008 - Validate Books By Selected Age Group Displayed In Search"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Advanced Search of Book by Multiple Filters"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.LibraryManagement.cucumber.stepDefinition.AdvancedBookSearchSteps.i_should_see_books_by_age_group(AdvancedBookSearchSteps.java:117)
+at ✽.I should see a table containing details of all the available books of the selected age group(file:///C:/Users/Esha/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/AdvancedBookSearch.feature:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.LibraryManagement.cucumber.Runner.RunnerTest@76c3e77a]" started-at="2025-08-04T23:40:07 IST" name="tearDownClass" finished-at="2025-08-04T23:40:08 IST" duration-ms="1380" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.LibraryManagement.cucumber.Runner.RunnerTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
