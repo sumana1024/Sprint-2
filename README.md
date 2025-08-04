@@ -28,6 +28,13 @@ This project is a complete test automation solution tailored for validating key 
 - Supports membership type selection with dynamic fee display (e.g., Gold: ₹5000, Platinum: ₹25000).
 - Validates card number field and prevents duplicate submissions.
 - Displays submitted members in a dynamic members table for verification.
+##  Automation Design Highlights
+- Cucumber BDD to express test cases in plain English (Gherkin)
+- Selenium WebDriver for browser automation (primarily Firefox)
+- TestNG for test orchestration and reporting
+- Page Object Model (POM) pattern for modular and reusable code
+- HTML-based reporting for clear test outcome visibility
+- Data-driven testing using Cucumber Data Tables
 
 
 
