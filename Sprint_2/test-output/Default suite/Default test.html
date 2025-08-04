@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/6/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Aug 03 10:53:24 IST 2025</td>
+<td>Started on:</td><td>Mon Aug 04 14:26:07 IST 2025</td>
 </tr>
-<tr><td>Total time:</td><td>73 seconds (73153 ms)</td>
+<tr><td>Total time:</td><td>84 seconds (84457 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,44 +76,100 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit membership form with multiple entries", "Apply for Library Membership"</td>
-<td><div><pre>java.lang.AssertionError: Card number field is not reset after submission expected [] but found [LCN_004]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:225)
-	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:48)
-</pre></div><a href='#' onClick='toggleBox("stack-trace631851861", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace631851861'><pre>java.lang.AssertionError: Card number field is not reset after submission expected [] but found [LCN_004]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:150)
-	at org.testng.Assert.assertEquals(Assert.java:132)
-	at org.testng.Assert.assertEquals(Assert.java:656)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:225)
-	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:48)
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with invalid phone number", "Contact and Query resolving services"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid phone message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:208)
+	at ✽.I should see an error message for invalid phone(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:65)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2078237101", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2078237101'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid phone message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidPhoneMessage(ServiceSteps.java:208)
+	at ✽.I should see an error message for invalid phone(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:65)
 </pre></div></td>
-<td>14</td>
+<td>8</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Submit duplicate card number and expect rejection", "Apply for Library Membership"</td>
-<td><div><pre>java.lang.AssertionError: Duplicate card number [LCN_005] was accepted more than once expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:235)
-	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:60)
-</pre></div><a href='#' onClick='toggleBox("stack-trace279023166", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace279023166'><pre>java.lang.AssertionError: Duplicate card number [LCN_005] was accepted more than once expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at com.LibraryManagement.cucumber.stepDefinition.MembershipSteps.submitMembershipEntries(MembershipSteps.java:235)
-	at ✽.I submit the following membership entries:(file:///D:/New_Script/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/MemberShip.feature:60)
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with invalid name", "Contact and Query resolving services"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid name message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:223)
+	at ✽.I should see an error message for invalid name(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:95)
+</pre></div><a href='#' onClick='toggleBox("stack-trace739812330", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace739812330'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid name message not displayed]&gt; but was:&lt;[Message Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidNameMessage(ServiceSteps.java:223)
+	at ✽.I should see an error message for invalid name(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:95)
 </pre></div></td>
-<td>11</td>
+<td>8</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with invalid email id", "Contact and Query resolving services"</td>
+<td><div><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid email message not displayed]&gt; but was:&lt;[Mail Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:193)
+	at ✽.I should see an error message for invalid email(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:35)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1494896526", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1494896526'><pre>org.junit.ComparisonFailure: expected:&lt;[Invalid email message not displayed]&gt; but was:&lt;[Mail Sent Successfully]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.verifyInvalidEmailMessage(ServiceSteps.java:193)
+	at ✽.I should see an error message for invalid email(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:35)
+</pre></div></td>
+<td>8</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with blank name", "Contact and Query resolving services"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterName(ServicePage.java:65)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillChatForm(ServiceSteps.java:170)
+	at ✽.I fill the chat form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:101)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1429204602", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1429204602'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterName(ServicePage.java:65)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillChatForm(ServiceSteps.java:170)
+	at ✽.I fill the chat form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:101)
+</pre></div></td>
+<td>8</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with blank email id", "Contact and Query resolving services"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterEmail(ServicePage.java:53)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillEmailForm(ServiceSteps.java:158)
+	at ✽.I fill the email form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:41)
+</pre></div><a href='#' onClick='toggleBox("stack-trace220558713", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace220558713'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterEmail(ServicePage.java:53)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillEmailForm(ServiceSteps.java:158)
+	at ✽.I fill the email form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:41)
+</pre></div></td>
+<td>6</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with blank phone number", "Contact and Query resolving services"</td>
+<td><div><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterPhone(ServicePage.java:59)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillChatForm(ServiceSteps.java:171)
+	at ✽.I fill the chat form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:71)
+</pre></div><a href='#' onClick='toggleBox("stack-trace368788838", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace368788838'><pre>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:96)
+	at com.LibraryManagement.cucumber.pages.ServicePage.enterPhone(ServicePage.java:59)
+	at com.LibraryManagement.cucumber.stepDefinition.ServiceSteps.fillChatForm(ServiceSteps.java:171)
+	at ✽.I fill the chat form with the following data:(file:///C:/Users/manna/git/Sprint-2/Sprint_2/src/test/java/com/LibraryManagement/cucumber/features/servicePage.feature:71)
+</pre></div></td>
+<td>5</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -125,34 +181,24 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with no drag-drop action", "Apply for Library Membership"</td>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with valid name", "Contact and Query resolving services"</td>
 <td></td>
 <td>9</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 <tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "View Members with Memberships", "Apply for Library Membership"</td>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate only one option selection in service page", "Contact and Query resolving services"</td>
+<td></td>
+<td>6</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Email option with different email inputs", "Contact and Query resolving services"</td>
+<td></td>
+<td>8</td>
+<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
+<tr>
+<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Validate Chat section with valid phone number", "Contact and Query resolving services"</td>
 <td></td>
 <td>7</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify successful Human Verification via drag and drop", "Apply for Library Membership"</td>
-<td></td>
-<td>6</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select Gold Membership and verify amount", "Apply for Library Membership"</td>
-<td></td>
-<td>6</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Select Platinum Membership and verify amount", "Apply for Library Membership"</td>
-<td></td>
-<td>7</td>
-<td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
-<tr>
-<td title='com.LibraryManagement.cucumber.Runner.RunnerTest.runScenario()'><b>runScenario</b><br>Test class: com.LibraryManagement.cucumber.Runner.RunnerTest<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify failed Human Verification with incorrect drop location", "Apply for Library Membership"</td>
-<td></td>
-<td>6</td>
 <td>com.LibraryManagement.cucumber.Runner.RunnerTest@3bf9ce3e</td></tr>
 </table><p>
 </body>

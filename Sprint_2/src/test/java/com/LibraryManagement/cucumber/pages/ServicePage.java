@@ -16,8 +16,9 @@ public class ServicePage {
     WebDriver driver;
 
     public ServicePage() {
-        // get driver instance (however you manage your driver)
+        
         driver = DriverSetup.getWebDriver();
+       
     }
 
     public void openSite() {
@@ -47,19 +48,19 @@ public class ServicePage {
     }
 
     public void enterEmail(String email) {
-        WebElement emailField = driver.findElement(By.id("fromEmail"));
+        WebElement emailField = driver.findElement(By.xpath("//input[@id='fromEmail']"));
         emailField.clear();
         emailField.sendKeys(email);
     }
 
     public void enterPhone(String phone) {
-        WebElement phoneField = driver.findElement(By.id("yourphone"));
+        WebElement phoneField = driver.findElement(By.cssSelector("#yourphone"));
         phoneField.clear();
         phoneField.sendKeys(phone);
     }
 
     public void enterName(String name) {
-        WebElement nameField = driver.findElement(By.id("chatname"));
+        WebElement nameField = driver.findElement(By.xpath("/html[1]/body[1]/div[4]/form[1]/div[4]/div[3]/label[1]/input[1]"));
         nameField.clear();
         nameField.sendKeys(name);
     }
@@ -69,7 +70,7 @@ public class ServicePage {
         queryField.sendKeys(queryText);
     }
     public void enterQuerychat(String queryText) {
-        WebElement queryField1 = driver.findElement(By.id("querychat")); 
+        WebElement queryField1 = driver.findElement(By.xpath("//label/textarea[contains(@id,'chat')]")); 
         queryField1.clear();
         queryField1.sendKeys(queryText);
     }
@@ -97,7 +98,10 @@ public class ServicePage {
     }
 
     public String isInvalidEmailMessageDisplayed() {
-        return driver.findElement(By.id("mediummailoutput")).getText();
+    	
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement errorMsg = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mediummailoutput")));
+        return errorMsg.getText();
     }
 
     public boolean isBlankEmailMessageDisplayed() {

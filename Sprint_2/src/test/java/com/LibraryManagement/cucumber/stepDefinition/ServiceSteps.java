@@ -1,9 +1,12 @@
 package com.LibraryManagement.cucumber.stepDefinition;
 
-
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import com.LibraryManagement.cucumber.pages.*;
+
+import java.util.List;
+import java.util.Map;
 
 public class ServiceSteps {
 
@@ -20,47 +23,43 @@ public class ServiceSteps {
         servicePage.selectServiceOption(option);
     }
 
-    @When("I enter email id {string}")
-    public void enterEmailId(String email) {
-        servicePage.enterEmail(email);
+    @When("I select the following service options:")
+    public void selectMultipleOptions(DataTable optionsTable) {
+        List<String> options = optionsTable.asList();
+        for (String option : options) {
+            servicePage.selectServiceOption(option);
+        }
     }
 
-    @When("I leave the email id field blank")
-    public void leaveEmailBlank() {
-        servicePage.enterEmail(""); // blank
+    // Email form using DataTable
+    @When("I fill the email form with the following data:")
+    public void fillEmailForm(DataTable dataTable) {
+        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+        String email = data.get(0).getOrDefault("Email ID","");
+        String query = data.get(0).getOrDefault("Query","");
+
+        servicePage.enterEmail(email== null? "" : email);
+        servicePage.enterQueryemail(query== null? "" : query);
     }
 
-    @When("I enter phone number {string}")
-    public void enterPhoneNumber(String phone) {
-        servicePage.enterPhone(phone);
+    // Chat form using DataTable
+    @When("I fill the chat form with the following data:")
+    public void fillChatForm(DataTable dataTable) {
+        List<Map<String, String>> data = dataTable.asMaps(String.class, String.class);
+
+        String name = data.get(0).getOrDefault("Name", "");
+        String phone = data.get(0).getOrDefault("Phone Number", "");
+        String query = data.get(0).getOrDefault("Query", "");
+
+        servicePage.enterName(name == null ? "" : name);
+        servicePage.enterPhone(phone == null ? "" : phone);
+        servicePage.enterQuerychat(query == null ? "" : query);
     }
 
-    @When("I leave the phone number field blank")
-    public void leavePhoneBlank() {
-        servicePage.enterPhone(""); // blank
-    }
-
-    @When("I enter user name {string}")
-    public void enterUserName(String name) {
-        servicePage.enterName(name);
-    }
-
-    @When("I leave the name field blank")
-    public void leaveNameBlank() {
-        servicePage.enterName(""); // blank
-    }
-    @When("I enter email query {string}")
-    public void enterQueryemailstep(String querymail) {
-        servicePage.enterQueryemail(querymail);
-    }
-    
-    @When("I enter chat query {string}")
-    public void enterQuerychatstep(String querychat) {
-        servicePage.enterQuerychat(querychat);
-    }
     @When("I click the submit button")
     public void clickSubmitButton() throws InterruptedException {
         servicePage.clickSubmit();
+        Thread.sleep(1000);
     }
 
     @Then("Only one option should remain selected")
@@ -114,4 +113,3 @@ public class ServiceSteps {
         Assert.assertTrue("Blank name message not displayed", servicePage.isBlankNameMessageDisplayed());
     }
 }
-
