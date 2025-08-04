@@ -13,8 +13,8 @@ TestNG
 Maven (Project and Dependency Management)
 ## Functional Modules Under Test
 ### Advanced Book Serach
--book search functionality with multiple filters
--Search by author name, subject, edition, format, and age group
--Input validation for required fields
--"All Books" section for browsing the complete collection
+- book search functionality with multiple filters
+- Search by author name, subject, edition, format, and age group
+- Input validation for required fields
+- "All Books" section for browsing the complete collection
 
