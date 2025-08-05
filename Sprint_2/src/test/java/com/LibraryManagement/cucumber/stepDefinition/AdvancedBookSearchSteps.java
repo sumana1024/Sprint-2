@@ -59,7 +59,7 @@ public class AdvancedBookSearchSteps {
     @Then("I should see a table containing details of the book searched")
     public void i_should_see_book_details() {
         assertTrue(searchPage.isResultsTableDisplayed());
-        System.out.println("=====Test Pass: I saw a table containing details of the book searched=====");
+        System.out.println("=====Test Passed: I saw a table containing details of the book searched=====");
     }
 
     //Leaves all fields blank 
@@ -72,7 +72,7 @@ public class AdvancedBookSearchSteps {
     @Then("I should see appropriate error messages for all mandatory fields")
     public void i_should_see_error_messages() {
         assertTrue(searchPage.isErrorMessageDisplayed());
-        System.out.println("=====Test Pass: Error message displayed for all mandatory fields=====");
+        System.out.println("=====Test Passed: Error message displayed for all mandatory fields=====");
     }
 
     //Validates that all the details of the searched book match expected values.
@@ -86,7 +86,7 @@ public class AdvancedBookSearchSteps {
         assert actualDetails.get("Format").equalsIgnoreCase("Magazines");
         assert actualDetails.get("Age").equalsIgnoreCase("adult");
 
-        System.out.println("======Test Pass: I saw a table containing all the details of the book searched======");
+        System.out.println("======Test Passed: I saw a table containing all the details of the book searched======");
     }
 
     //Verifies that an appropriate error message or some indication is shown when no book is found.
@@ -122,11 +122,9 @@ public class AdvancedBookSearchSteps {
         assertTrue(searchPage.isResultsTableDisplayed());
     }
     
+    //Validates advanced book search with Excel data
     @When("I submit the book search entries from Excel")
     public void submitBookSearchEntriesFromExcel() throws InterruptedException {
-        // ✅ Open site and go to Search section
-        searchPage.openSite();
-        searchPage.navigateToSearch();
 
         String filePath = "src/test/resources/data/AdvancedBookSearchData.xlsx";
         List<Map<String, String>> entries = ExcelReader.getData(filePath, "BookSearch");
@@ -151,13 +149,10 @@ public class AdvancedBookSearchSteps {
 
             if (expectedResult.equalsIgnoreCase("success")) {
                 Assert.assertTrue(searchPage.isResultsTableDisplayed(), "Expected results table not shown!");
-            } else if (expectedResult.equalsIgnoreCase("failure")) {
+            } 
+            else if (expectedResult.equalsIgnoreCase("failure")) {
                 Assert.assertTrue(searchPage.isErrorMessageDisplayedNoBooksFound(), "Expected failure message not shown!");
             }
         }
     }
-
-
-
-
 }

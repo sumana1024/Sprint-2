@@ -78,5 +78,5 @@ Feature: Advanced Search of Book by Multiple Filters
     
   @TCSH009
   Scenario: TCSH009 - Validate advanced book search with Excel data
+    Given I navigate to the "Search" section of the application
     When I submit the book search entries from Excel
-    
