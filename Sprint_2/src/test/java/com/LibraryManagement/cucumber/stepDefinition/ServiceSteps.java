@@ -4,6 +4,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import com.LibraryManagement.cucumber.pages.*;
+import com.LibraryManagement.cucumber.utils.ExcelReader;
 
 import java.util.List;
 import java.util.Map;
@@ -113,4 +114,49 @@ public class ServiceSteps {
     public void verifyBlankNameMessage() {
         Assert.assertTrue("Blank name message not displayed", servicePage.isBlankNameMessageDisplayed());
     }
+    
+    @When("I submit the service form entries from Excel")
+    public void submitServiceFormEntriesFromExcel() throws InterruptedException {
+        String filePath = "src/test/resources/data/ServiceData.xlsx";
+        List<Map<String, String>> entries = ExcelReader.getData(filePath, "Service");
+
+        for (Map<String, String> entry : entries) {
+            String type = entry.get("ServiceType");
+            String email = entry.get("Email ID");
+            String phone = entry.get("Phone Number");
+            String name = entry.get("Name");
+            String query = entry.get("Query");
+            String expected = entry.get("ExpectedMessage");
+
+            servicePage.selectServiceOption(type);
+
+            if (type.equalsIgnoreCase("Email")) {
+                servicePage.enterEmail(email == null ? "" : email);
+                servicePage.enterQueryemail(query == null ? "" : query);
+            } else if (type.equalsIgnoreCase("Chat")) {
+                servicePage.enterName(name == null ? "" : name);
+                servicePage.enterPhone(phone == null ? "" : phone);
+                servicePage.enterQuerychat(query == null ? "" : query);
+            }
+
+            servicePage.clickSubmit();
+
+            if (expected.contains("Success")) {
+                Assert.assertEquals("Message Sent Successfully", servicePage.isPhoneSuccessMessageDisplayed());
+            } else if (expected.contains("Invalid Email")) {
+                Assert.assertEquals("Invalid email message not displayed", servicePage.isInvalidEmailMessageDisplayed());
+            } else if (expected.contains("Blank Email")) {
+                Assert.assertTrue("Blank email message not displayed", servicePage.isBlankEmailMessageDisplayed());
+            } else if (expected.contains("Invalid Phone")) {
+                Assert.assertEquals("Invalid phone message not displayed", servicePage.isInvalidPhoneMessageDisplayed());
+            } else if (expected.contains("Blank Phone")) {
+                Assert.assertTrue("Blank phone message not displayed", servicePage.isBlankPhoneMessageDisplayed());
+            } else if (expected.contains("Invalid Name")) {
+                Assert.assertEquals("Invalid name message not displayed", servicePage.isInvalidNameMessageDisplayed());
+            } else if (expected.contains("Blank Name")) {
+                Assert.assertTrue("Blank name message not displayed", servicePage.isBlankNameMessageDisplayed());
+            }
+        }
+    }
+
 }

@@ -103,3 +103,9 @@ Feature: Contact and Query resolving services
       |      | 9876543210   | Need help with my account     |
     And I click the submit button
     Then I should see an error message for blank name
+    
+  @TCS011 @ExcelDrivenService
+  Scenario: TCS011 - Validate multiple service form entries from Excel
+    Given I open the site and navigate to the Services page
+    When I submit the service form entries from Excel
+  

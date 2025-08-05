@@ -75,3 +75,8 @@ Feature: Advanced Search of Book by Multiple Filters
       | AgeGroup | teen |
     And I click the Submit button
     Then I should see a table containing details of all the available books of the selected age group
+    
+  @TCSH009
+  Scenario: TCSH009 - Validate advanced book search with Excel data
+    When I submit the book search entries from Excel
+    

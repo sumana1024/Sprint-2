@@ -61,6 +61,12 @@ Feature: Apply for Library Membership
       | MembershipType | CardNumber | ExpectedMessage |
       | Gold           | LCN_005    | Membership Added |
       | Platinum       | LCN_005    | already          |
+      
+  @TCM_BULK_EXCEL
+  Scenario: Submit membership form using Excel data
+    Given I navigate to the Library Membership page
+    And I complete the human verification
+    When I submit the membership entries from Excel
   
   @TCME001
   Scenario: View Members with Memberships

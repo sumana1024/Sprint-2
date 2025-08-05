@@ -1,11 +1,16 @@
 package com.LibraryManagement.cucumber.stepDefinition;
 
 import com.LibraryManagement.cucumber.pages.AdvancedBookSearchPage;
+import com.LibraryManagement.cucumber.utils.ExcelReader;
 
 import io.cucumber.java.en.*;
 import static org.testng.Assert.assertTrue;
 import io.cucumber.datatable.DataTable;
+
+import java.util.List;
 import java.util.Map;
+
+import org.testng.Assert;
 
 public class AdvancedBookSearchSteps {
 
@@ -116,4 +121,43 @@ public class AdvancedBookSearchSteps {
     public void i_should_see_books_by_age_group() {
         assertTrue(searchPage.isResultsTableDisplayed());
     }
+    
+    @When("I submit the book search entries from Excel")
+    public void submitBookSearchEntriesFromExcel() throws InterruptedException {
+        // ✅ Open site and go to Search section
+        searchPage.openSite();
+        searchPage.navigateToSearch();
+
+        String filePath = "src/test/resources/data/AdvancedBookSearchData.xlsx";
+        List<Map<String, String>> entries = ExcelReader.getData(filePath, "BookSearch");
+
+        for (Map<String, String> entry : entries) {
+            String author = entry.get("Author");
+            String subject = entry.get("Subject");
+            String edition = entry.get("Edition");
+            String format = entry.get("Format");
+            String ageGroup = entry.get("AgeGroup");
+            String expectedResult = entry.get("ExpectedResult");
+
+            // Fill form fields
+            if (author != null && !author.isEmpty()) searchPage.enterAuthor(author);
+            if (subject != null && !subject.isEmpty()) searchPage.enterSubject(subject);
+            if (edition != null && !edition.isEmpty()) searchPage.selectEdition(edition);
+            if (format != null && !format.isEmpty()) searchPage.selectBookFormat(format);
+            if (ageGroup != null && !ageGroup.isEmpty()) searchPage.selectAgeGroup(ageGroup);
+
+            searchPage.clickSubmit();
+            Thread.sleep(1000);
+
+            if (expectedResult.equalsIgnoreCase("success")) {
+                Assert.assertTrue(searchPage.isResultsTableDisplayed(), "Expected results table not shown!");
+            } else if (expectedResult.equalsIgnoreCase("failure")) {
+                Assert.assertTrue(searchPage.isErrorMessageDisplayedNoBooksFound(), "Expected failure message not shown!");
+            }
+        }
+    }
+
+
+
+
 }
