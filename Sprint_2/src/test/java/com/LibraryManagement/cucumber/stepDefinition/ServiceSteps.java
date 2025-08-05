@@ -97,17 +97,18 @@ public class ServiceSteps {
     public void verifyBlankPhoneMessage() {
         Assert.assertTrue("Blank phone message not displayed", servicePage.isBlankPhoneMessageDisplayed());
     }
-
+    //assert if is give successful message
     @Then("I should see a successful name validation message")
     public void verifySuccessNameMessage() {
         Assert.assertEquals("Message Sent Successfully", servicePage.isPhoneSuccessMessageDisplayed());
     }
-
+    //assert if it give error message for invalid name
     @Then("I should see an error message for invalid name")
     public void verifyInvalidNameMessage() {
         Assert.assertEquals("Invalid name message not displayed", servicePage.isInvalidNameMessageDisplayed());
     }
-
+    
+    //assert if it give error message for blank name
     @Then("I should see an error message for blank name")
     public void verifyBlankNameMessage() {
         Assert.assertTrue("Blank name message not displayed", servicePage.isBlankNameMessageDisplayed());
