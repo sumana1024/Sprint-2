@@ -36,12 +36,16 @@ public class AdvancedBookSearchPage {
 
     //Enters the author's name in the Author Name field.
     public void enterAuthor(String author) {
-        driver.findElement(By.id("authorName")).sendKeys(author);
+    	WebElement authorName= driver.findElement(By.id("authorName"));
+    	authorName.clear();
+        authorName.sendKeys(author);
     }
 
     //Enters the book subject in the Subject field.
     public void enterSubject(String subject) {
-        driver.findElement(By.id("subject")).sendKeys(subject);
+        WebElement subjectField=driver.findElement(By.id("subject"));
+        subjectField.clear();
+        subjectField.sendKeys(subject);
     }
 
     //Selects an edition from the Edition dropdown list.
@@ -70,6 +74,7 @@ public class AdvancedBookSearchPage {
 	    try 
 	    {
 	        WebElement table=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bookscontainer table")));
+	        System.out.println("=====Test passed: Table displayed successfully.=====");
 	        return table.isDisplayed();
 	    } 
 	    catch (TimeoutException e) 
