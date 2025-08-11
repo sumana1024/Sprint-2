@@ -74,7 +74,6 @@ public class AdvancedBookSearchPage {
 	    try 
 	    {
 	        WebElement table=wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".bookscontainer table")));
-	        System.out.println("=====Test passed: Table displayed successfully.=====");
 	        return table.isDisplayed();
 	    } 
 	    catch (TimeoutException e) 

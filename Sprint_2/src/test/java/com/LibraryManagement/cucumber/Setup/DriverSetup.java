@@ -12,10 +12,7 @@ public class DriverSetup {
     
     public static WebDriver getWebDriver() {    
 	
-
-    	System.setProperty("webdriver.gecko.driver", "D:/CTS_Eclipse_plugin/geckodriver-v0.36.0-win64/geckodriver.exe");		
-
-    	//System.setProperty("webdriver.gecko.driver", "D:\\Internship\\CTS Internship\\Technical Training\\5_Selenium\\Mozilla Firefox Driver\\geckodriver-v0.36.0-win64\\geckodriver.exe");		
+    	System.setProperty("webdriver.gecko.driver", "path_to_geckodriver.exe");		
 
     	driver = new FirefoxDriver();
     	Hooks.driver = driver;

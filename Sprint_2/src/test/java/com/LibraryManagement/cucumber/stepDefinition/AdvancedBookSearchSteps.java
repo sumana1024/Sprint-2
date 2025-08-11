@@ -28,7 +28,8 @@ public class AdvancedBookSearchSteps {
     //Fill the Advanced Book Search form using data provided in the DataTable.
     @When("I provide the following book search details:")
     public void i_provide_the_following_book_search_details(DataTable dataTable) {
-        Map<String, String> data = dataTable.asMap();
+        //Map<String, String> data = dataTable.asMap();
+    	Map<String, String> data = dataTable.asMap(String.class, String.class);
 
         if (data.containsKey("Author")) {
             searchPage.enterAuthor(data.get("Author"));
@@ -45,7 +46,7 @@ public class AdvancedBookSearchSteps {
         if (data.containsKey("AgeGroup")) {
             searchPage.selectAgeGroup(data.get("AgeGroup"));
         }
-        System.out.println("I provide details of book to search");
+        System.out.println("I provided details of book to search");
     }
     
     //Clicks the Submit button to execute the search.
